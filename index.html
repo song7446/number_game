@@ -14,7 +14,7 @@
         }
         .form input{
             width: 200px;
-            
+
         }
     </style>
 </head>
@@ -26,8 +26,8 @@
         <label for="guessField">
             추측 숫자를 입력하세요
         </label>
-        <input type="text" id="guessField">
-        <input type="submit" value="submit">
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="submit" class="guessSubmit">
     </form>
 
     <!-- 결과 창 -->
@@ -36,5 +36,21 @@
         <p class="lastResult"></p>
         <p class="lowOrHi"></p>
     </div>
+    <script>
+        // q1. 1~100까지 랜덤한 숫자(정수를 반환하는 변수 randomNumber를 선언하고 초기화 하세요.
+        const randomNumber = Math.floor(Math.random()*100)+1
+        // q2. DOM 요소 5가지를 선택해서 변수로 선언해 주세요
+        // guesses, lastResult, lowOrHi, guessSubmit, guessField
+        const guesses = document.querySelector('.guesses')
+        const lastResult = document.querySelector('.lastResult')
+        const lowOrHi = document.querySelector('.lowOrHi')
+        const guessSubmit = document.querySelector('.guessSubmit')
+        const guessField = document.querySelector('.guessField')
+        // q3. 변수 2가지를 선언해주세요. guessCount 초기값 = 1, resetButton 선언만
+        let guessCount = 1
+        let resetButton
+
+
+    </script>
 </body>
 </html>
