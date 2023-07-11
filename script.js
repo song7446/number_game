@@ -43,7 +43,7 @@ function checkGuess(event){
         }
     }
     guessCount++
-    guessField.value=''
+    guessField.value=''; // 인풋태그 없애기
 }
 // 이벤트 리스너 만들기 click 했을 때 checkGuess 함수를 실행하는 리스너 추가
 guessSubmit.addEventListener('click',checkGuess)
