@@ -58,25 +58,28 @@
             const userGuess = Number(guessField.value)
             if(userGuess===randomNumber)
             {
-                lastResult.textContent = "정답입니다 축하합니다"
-                guessField.disabled = true
-                guessSubmit.disabled = true
-                resetButton = document.createElement('button')
-                resetButton.textContent = "새 게임하기"
-                document.body.appendChild(resetButton)
+                lastResult.textContent = guessCount + "번 시도하셨습니다 정답입니다 축하합니다" 
+                setgameOver()
             }
-            else if(userGuess>randomNumber)
+            else if(userGuess===10)
             {
-                lastResult.textContent = "Low"
-                guessCount++
+                lastResult.textContent = "게임 오버 10회를 모두 사용하셧습니다"
+                setgameOver()
             }
             else{
-                lastResult.textContent = "High"
-                guessCount++
+                
             }
+            guessCount++
         }
         // 이벤트 리스너 만들기 click 했을 때 checkGuess 함수를 실행하는 리스너 추가
         guessSubmit.addEventListener('click',checkGuess)
+        function setgameOver(){
+            guessField.disabled = true
+            guessSubmit.disabled = true
+            resetButton = document.createElement('button')
+            resetButton.textContent = "새 게임하기"
+            document.body.appendChild(resetButton)
+        }
 
     </script>
 </body>
