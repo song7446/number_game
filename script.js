@@ -36,10 +36,10 @@ function checkGuess(event){
     else{
         if(userGuess>randomNumber)
         {
-            lastResult.lowOrHi = "추측한 숫자보다 낮습니다 "+guessCount+"번 시도하셨습니다"
+            lastResult.textContent = "추측한 숫자보다 낮습니다 "+guessCount+"번 시도하셨습니다"
         }
         else{
-            lastResult.lowOrHi = "추측한 숫자보다 높습니다 "+guessCount+"번 시도하셨습니다"
+            lastResult.textContent = "추측한 숫자보다 높습니다 "+guessCount+"번 시도하셨습니다"
         }
     }
     guessCount++
